@@ -1,0 +1,86 @@
+@use "../abstracts/" as *;
+@use "./align" as *;
+
+@layer layout.Footer {
+  .footer {
+    color: $gray66;
+    font-size: rem(14);
+    @include mobile {
+      color: $graycc;
+      font-size: rem(20);
+    }
+    &__advertisement {
+      @extend .mxauto;
+      font-size: 0;
+
+      img {
+        aspect-ratio: 8.74;
+        object-fit: cover;
+      }
+
+      @include mobile {
+        img {
+          aspect-ratio: 7.058;
+        }
+      }
+    }
+    &__bottom {
+      border-top: 1px solid $gray66;
+      background-color: $white;
+      @include mobile {
+        padding: 0 rem(30) 0 rem(38);
+        background-color: $gray3f;
+      }
+      @include mobile {
+        padding: rem(38) rem(30);
+        background: $gray3f;
+      }
+      .logo {
+        color: yellow;
+        font-size: rem(26);
+        font-weight: 700;
+      }
+      > div {
+        @extend .mxauto;
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+    &__address {
+      font-weight: 500;
+      margin-top: rem(46);
+      @include bar(l, 4, 4, $gray66, 10);
+      @include mobile {
+        display: block;
+        color: $graycc;
+        address {
+          margin-top: rem(20);
+        }
+      }
+      address:before {
+        border-radius: rem(100);
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+    &__contact {
+      display: flex;
+      gap: rem(20);
+      margin-top: rem(10);
+      @include mobile {
+        gap: 0;
+        @include bar(l, 2, 2, $graycc, 10);
+      }
+    }
+    &__copy {
+      margin-top: rem(35);
+      font-weight: 500;
+      @include mobile {
+        margin-top: rem(50);
+        font-weight: 400;
+      }
+    }
+  }
+}

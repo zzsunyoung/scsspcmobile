@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+@layer Componets.Sitemap {
+  .sitemap {
+    width: auto;
+    height: auto;
+    inset: rem(94) 0 0 100%;
+
+    transition: 0.5s allow-discrete;
+
+    &:popover-open {
+      inset: rem(94) 0 0 0;
+
+      @starting-style {
+        inset: rem(94) 0 0 100%;
+      }
+    }
+    &__nav {
+      overflow: auto;
+      height: rem(100);
+      background-color: $yellow;
+      @include scroll(5, 10, rgba($white, 0.5));
+    }
+  }
+}
