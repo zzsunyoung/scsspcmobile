@@ -4,9 +4,9 @@
 $buttonSize: (
   1: (
     "className": ".base",
-    "height": 40,
+    "height": 44,
     "fontSize": 16,
-    "paddingInline": 25,
+    "paddingInline": 33,
     "borderWidth": 1,
     "fontWeight": null,
   ),
@@ -15,10 +15,22 @@ $buttonSize: (
 //버튼 색상정의
 $buttonColor: (
   1: (
-    "className": "blue",
-    "bgColor": #000,
-    "color": #fff,
-    "borderColor": red,
+    "className": ".primary",
+    "bgColor": $yellow,
+    "color": $white,
+    "borderColor": $yellow,
+  ),
+  2: (
+    "className": ".secondary",
+    "bgColor": $white,
+    "color": $yellow,
+    "borderColor": $yellow,
+  ),
+  3: (
+    "className": ".gray",
+    "bgColor": $white,
+    "color": $gray99,
+    "borderColor": $gray99,
   ),
 );
 
@@ -108,5 +120,10 @@ $buttonIcon: (
     width: rem(30);
     height: rem(30);
     order: 1;
+  }
+  .btn-group {
+    .dialog-type1 & {
+      margin-top: rem(30);
+    }
   }
 }

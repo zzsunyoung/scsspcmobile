@@ -1,24 +1,97 @@
 @use "../abstracts/" as *;
 @layer Componets.Sitemap {
   .sitemap {
-    width: auto;
-    height: auto;
-    inset: rem(94) 0 0 100%;
-
-    transition: 0.5s allow-discrete;
-
-    &:popover-open {
-      inset: rem(94) 0 0 0;
-
-      @starting-style {
-        inset: rem(94) 0 0 100%;
-      }
-    }
-    &__nav {
-      overflow: auto;
-      height: rem(100);
+    display: none;
+    @include mobile {
+      width: auto;
+      height: auto;
+      inset: rem(94) 0 0 100%;
+      padding: rem(90) rem(30);
       background-color: $yellow;
-      @include scroll(5, 10, rgba($white, 0.5));
+      transition: 0.5s allow-discrete;
+      border: none;
+      display: grid;
+      overflow-y: auto;
+      overflow-x: hidden;
+      summary {
+        list-style: none;
+        white-space: nowrap;
+      }
+      &:popover-open {
+        inset: rem(94) 0 0 0;
+        @starting-style {
+          inset: rem(94) 0 0 100%;
+        }
+      }
+      &__nav {
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-inline: rem(100);
+        @include scroll(5, 10, rgba($white, 0.5));
+        > ul {
+          > li {
+            border-bottom: rem(1) solid rgbba($white, 0.5);
+            summary {
+              color: $white;
+              font-size: rem(46);
+              font-weight: 700;
+              line-height: 100%;
+              padding-block: rem(34);
+            }
+          }
+        }
+        .depth2 {
+          ul {
+            display: grid;
+            gap: rem(34);
+            margin-block: rem(34);
+            li {
+              > ul {
+                display: grid;
+                gap: rem(34);
+                > li {
+                  a {
+                    display: grid;
+                    grid-template-columns: rem(20) 1fr;
+                    color: $white;
+                    font-size: rem(30);
+
+                    &::before {
+                      content: "";
+                      width: rem(3);
+                      height: rem(3);
+                      border-radius: rem(10);
+                      background-color: #fff387;
+                      align-self: start;
+                      margin-top: rem(19);
+                      justify-self: center;
+                    }
+                  }
+                }
+                ul {
+                  a {
+                    display: grid;
+                    grid-template-columns: rem(20) 1fr;
+                    color: $white;
+                    font-size: rem(34);
+
+                    &::before {
+                      content: "";
+                      width: rem(3);
+                      height: rem(3);
+                      border-radius: rem(10);
+                      background-color: #fff387;
+                      align-self: start;
+                      margin-top: rem(19);
+                      justify-self: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="../js/global.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -67,11 +68,11 @@
               <summary>소년소녀부</summary>
               <div class="depth2">
                 <ul>
-                  <li href=""><a>공지사항</a></li>
-                  <li href=""><a>스피치</a></li>
-                  <li href=""><a>매뉴얼및조직도</a></li>
-                  <li href=""><a>활동방향</a></li>
-                  <li href="">
+                  <li><a>공지사항</a></li>
+                  <li><a>스피치</a></li>
+                  <li><a>매뉴얼및조직도</a></li>
+                  <li><a>활동방향</a></li>
+                  <li>
                     <a>부원회 운영자료</a>
                     <ul>
                       <li><a href="">본부등재자료</a></li>
@@ -205,7 +206,206 @@
       </nav>
       <a href="" class="btn-login">로그인</a>
     </div>
-    <main>본문삽입</main>
+    <main>
+      <div class="visual sub1">
+        <div>
+          <h2 class="visual__title">소년소녀부</h2>
+          <p class="visual__copy">'지지 않는마음' 을 품은 태양 초등 소년소녀부</p>
+        </div>
+      </div>
+      <div class="bradcrums">
+        <div>
+          <h2 class="a11y-hidden">현재위치</h2>
+          <ul class="bradcrums__web">
+            <li><a href="">소년소녀부</a></li>
+            <li><a href="">미래부</a></li>
+            <li><a href="">미래본부 및 사명회</a></li>
+            <li><a href="">교육부</a></li>
+            <li><a href="">미래부 자료실</a></li>
+            <li><a href="">커뮤니티</a></li>
+          </ul>
+          <ul class="bradcrums__mobile">
+            <li>
+              <button popovertarget="breadcrumbs1">소년소녀부</button>
+              <ul popover id="breadcrumbs1" class="depth2">
+                <li>
+                  <ul>
+                    <li><a href="">소년소녀부</a></li>
+                    <li><a href="">매래부</a></li>
+                    <li><a href="">미래본부 사명회</a></li>
+                    <li><a href="">교육부</a></li>
+                    <li><a href="">미래부자료실</a></li>
+                    <li><a href="">커뮤니티</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="">소년소녀부</a></li>
+                    <li><a href="">매래부</a></li>
+                    <li><a href="">미래본부 사명회</a></li>
+                    <li><a href="">교육부</a></li>
+                    <li><a href="">미래부자료실</a></li>
+                    <li><a href="">커뮤니티</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button popovertarget="breadcrumbs2">소년소녀부</button>
+              <ul popover id="breadcrumbs2" class="depth2">
+                <li>
+                  <a href="">
+                    <ul>
+                      <li><a href="">소년소녀부</a></li>
+                      <li><a href="">매래부</a></li>
+                      <li><a href="">미래본부 사명회</a></li>
+                      <li><a href="">교육부</a></li>
+                      <li><a href="">미래부자료실</a></li>
+                      <li><a href="">커뮤니티</a></li>
+                    </ul>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <ul>
+                      <li><a href="">소년소녀부</a></li>
+                      <li><a href="">매래부</a></li>
+                      <li><a href="">미래본부 사명회</a></li>
+                      <li><a href="">교육부</a></li>
+                      <li><a href="">미래부자료실</a></li>
+                      <li><a href="">커뮤니티</a></li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mxauto container">
+        <h2>버튼가이드</h2>
+        <button class="btn primary base">.base</button>
+        <button class="btn primary base">.primary</button>
+        <button class="btn secondary base">.secondary</button>
+        <button class="btn gray base">.gray</button>
+
+        <h2>뱃지가이드</h2>
+        <button class="badge base orange">.orange</button>
+        <button class="badge base skyblue">.skyble</button>
+        <button class="badge base green">.green</button>
+        <button class="badge base blue">.blue</button>
+        <button class="badge base gray">.gary</button>
+        <button class="badge base darkgray">.darkgray</button>
+
+        <h2>form 가이드</h2>
+        <input type="text" class="input" value="텍스트" /><br />
+        <input type="text" class="input" placeholder="텍스트" /><br />
+        <input type="text" class="input" disabled value="텍스트" /><br />
+        <input type="text" class="input" readonly value="텍스트" /><br />
+
+        <select class="select">
+          <option>선택하세요.</option>
+        </select>
+        <input type="checkbox" name="" class="check-type1" id="chk_1" checked /><label for="chk_1">체크박스1111</label> <input type="checkbox" name="" class="check-type1" id="chk_2" /><label for="chk_2">체크박스22222</label>
+
+        <textarea class="textarea" name="" id=""></textarea>
+        <br />
+        <h2>표가이드</h2>
+        <div class="scroll-table">
+          <table class="table-type1">
+            <caption>
+              게시판리스트
+            </caption>
+            <colgroup>
+              <col style="width: 12rem" />
+              <col style="width: 12rem" />
+              <col style="width: 15rem" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>제목</th>
+                <th>제목</th>
+                <th>제목</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+              </tr>
+              <tr>
+                <td colspan="3">현재 게시물이 존재하지 않습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <h2>표가이드 2</h2>
+        <div class="">
+          <table class="table-type2">
+            <caption>
+              표제목
+            </caption>
+            <colgroup>
+              <col style="width: 30%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+                <th>제목3</th>
+                <th>제목4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-text="월">1</td>
+                <td data-text="형태">1</td>
+                <td data-text="운영방안">1</td>
+                <td data-text="비고">1</td>
+              </tr>
+              <tr>
+                <td data-text="월">2</td>
+                <td data-text="형태">3</td>
+                <td data-text="운영방안">4</td>
+                <td data-text="비고">5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br /><br />
+        <h2>표가이드 3</h2>
+        <table class="table-type3">
+          <caption>
+            표제목
+          </caption>
+          <colgroup>
+            <col style="width: 20rem" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>제목</th>
+              <td>내용</td>
+            </tr>
+            <tr>
+              <th>제목2</th>
+              <td>내용2</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>팝업</h2>
+        <button class="btn base primary" popovertarget="dialog1" popovertargetaction="show">팝업열기</button>
+        <div class="dialog-type1">
+          <strong class="dialog-type1__title">일치하는 정보 없습니다. </strong>
+          <p class="dialog-type1__text">입력하신 정보와 일치하는 회원정보가 없습니다. 정확한 로인정보를 입력하세요</p>
+          <div class="btn-group">
+            <button class="btn base secondary" popovertarget="dialog1" popovertargetaction="hide">확인</button>
+            <button class="btn-close" popovertarget="dialog1" popovertargetaction="hide" aria-label="닫기"></button>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="footer__advertisement">

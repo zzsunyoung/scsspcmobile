@@ -4,34 +4,35 @@
 // 폼요소 공통디자인 정의
 $formSettings: (
   // "key":value,
-  "height": rem(40),
-  "border": rem(1) solid #000,
-  "borderRadius": rem(4),
-  "bgColor": #000,
-  "paddingInline": rem(12),
-  "fontColor": #000,
-  "fontSize": rem(14),
+  "height": rem(44),
+  "border": rem(1) solid #e1e1e1,
+  "borderRadius": rem(0),
+  "bgColor": #fafafa,
+  "paddingInline": rem(20),
+  "fontColor": $gray99,
+  "fontSize": rem(16),
   "lineHeight": 1,
-  "letterSpacing": rem(-0.5),
-  "placehodlerColor": #000,
+  "letterSpacing": rem(0),
+  "placehodlerColor": $graycc,
   "disabledBgColor": rgba(#000, 0.1),
   "readonlyBgColor": rgba(#000, 0.05)
 );
 // Select디자인 정의
 $selectSetting: (
   "bgUrl": "bg_select.svg",
-  "iconPosition": rem(12),
-  "bgWidth": 6,
+  "iconPosition": rem(20),
+  "bgWidth": 12,
   "paddingInline": 12,
+  "iconWidth": 12,
 );
 // 라디오 & 체크박스 디자인 정의
 $radioCheckSetting: (
   1: (
-    "className": ".radio-type1",
-    "offImage": "ico_radio_off.svg",
-    "onImage": "ico_radio_on.svg",
-    "width": rem(24),
-    "height": rem(24),
+    "className": ".check-type1",
+    "offImage": "bg_check_off.svg",
+    "onImage": "bg_check_on.svg",
+    "width": rem(26),
+    "height": rem(26),
   ),
 );
 
@@ -75,7 +76,7 @@ $radioCheckSetting: (
   .select {
     $result: map-get($selectSetting, paddingInline) * 2 + map-get($selectSetting, bgWidth);
     @extend %form;
-    @include background(map-get($selectSetting, bgUrl), right map-get($selectSetting, iconPosition) center);
+    @include background(map-get($selectSetting, bgUrl), right map-get($selectSetting, iconPosition) center, null, rem(map-get($selectSetting, iconWidth)));
     padding-right: rem($result);
     appearance: none;
     width: var(--w, 100%);

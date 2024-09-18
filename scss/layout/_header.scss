@@ -14,7 +14,7 @@
       display: grid;
       grid-template-columns: min-content 1fr min-content;
       align-items: center;
-      gap: rem(114);
+      gap: rem(14);
     }
     .utillity {
       display: flex;
@@ -27,14 +27,16 @@
   }
 }
 @layer Popup.Header {
-  body {
-    &:has(#sitemap:popover-open) .hader .btn-search {
-      display: none;
-    }
-    .header__inner {
-      ::before {
-        content: "";
-        width: rem(30);
+  @include mobile {
+    body {
+      &:has(#sitemap:popover-open) .hader .btn-search {
+        display: none;
+      }
+      .header__inner {
+        ::before {
+          content: "";
+          width: rem(30);
+        }
       }
     }
   }
